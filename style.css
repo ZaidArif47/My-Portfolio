@@ -486,3 +486,7 @@ section{
   background-color: var(--text-color);
   color: var(--main-color);
 }
+
+.more-content{
+  display: none;
+}

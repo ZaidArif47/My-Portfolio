@@ -18,3 +18,13 @@ document.getElementById('yes-btn').addEventListener('click', () => {
 document.getElementById('no-btn').addEventListener('click', () => {
     document.getElementById('modal').style.display = 'none';
 });
+
+document.getElementById('read-more').addEventListener('click', () => {
+    document.querySelector('.more-content').style.display = 'block';
+    document.querySelector('#read-more').style.display = 'none';
+});
+
+document.getElementById('read-less').addEventListener('click', () => {
+    document.querySelector('.more-content').style.display = 'none';
+    document.querySelector('#read-more').style.display = 'inline-block';
+})
