@@ -224,8 +224,8 @@ section{
   margin: 5rem 0;
 }
 .projects{
-  background-color: var(--bg-color);
-  color: black;
+  background: var(--bg-color);
+  /*color: black;*/
 }
 .projects h2{
   color: var(--text-color);
@@ -236,41 +236,94 @@ section{
   align-items: center;
   gap: 2.5rem;
 }
-.project-box{
+.projects-container .project-box{
+  position: relative;
+  border-radius: 3rem;
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  /*cursor: pointer;
+  transition: 0.4s ease-in-out;*/
+}
+.project-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.projects-container .project-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+.project-box:hover img{
+  transform: scale(1.1);
+}
+.project-box .project-info{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-color);
-  height: 420px;
-  border-radius: 3rem;
-  cursor: pointer;
-  transition: 0.4s ease-in-out;
-}
-.project-box:hover{
-  background-color: var(--second-bg-color);
-  color: var(--main-color);
-  border: 5px solid var(--main-color);
-  transform: scale(1.03);
-}
-.project-info{
-  display: flex;
   flex-direction: column;
   text-align: center;
-  align-items: center;
-  padding: 5rem;
+  padding: 0 4rem;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
-.project-info i{
-  font-size: 8rem;
+.project-box .project-info:hover{
+  background: radial-gradient(#00ff51e2,var(--main-color));
+  transform: scale(1.1);
 }
 .project-info h4{
-  font-size: 3.5rem;
-  margin: 2rem 0;
+  font-size: 3rem;
+  color: white;
   font-weight: 800;
 }
 .project-info p{
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
   font-weight: 600;
-  line-height: 1.7;
+  color: white;
+}
+
+.project-info {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7); /* Adding a semi-transparent background */
+  border-radius: 1rem;
+}
+/* Add text shadows to project info text */
+.project-info h4, .project-info p {
+  color: var(--text-color);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.project-info a{
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: white;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+}
+.project-info a i{
+  font-size: 3rem;
+  color: var(--main-color);
 }
 
 .contact{
