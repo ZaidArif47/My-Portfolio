@@ -285,7 +285,7 @@ section{
   background: radial-gradient(#00ff51e2,var(--main-color));
   transform: scale(1.1);
 }
-.project-info h4{
+.project-info h4, .project-info h8{
   font-size: 3rem;
   color: white;
   font-weight: 800;
@@ -305,7 +305,7 @@ section{
   border-radius: 1rem;
 }
 /* Add text shadows to project info text */
-.project-info h4, .project-info p {
+.project-info h4,.project-info h8, .project-info p {
   color: var(--text-color);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
