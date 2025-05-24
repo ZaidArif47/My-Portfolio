@@ -11,7 +11,7 @@ document.getElementById('download-btn').addEventListener('click', () => {
 });
 
 document.getElementById('yes-btn').addEventListener('click', () => {
-    window.open('zaidArifResume.pdf', '_blank');
+    window.open('ZaidArif.pdf', '_blank');
     document.getElementById('modal').style.display = 'none';
 });
 
